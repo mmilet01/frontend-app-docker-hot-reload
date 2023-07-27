@@ -6,7 +6,7 @@ function App() {
 		<div className="App">
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
-				<p>Hot reload enabled in linux env.</p>
+				<p>Hot reload enabled in linux env & CI testing</p>
 				<a
 					className="App-link"
 					href="https://reactjs.org"
