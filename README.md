@@ -1,6 +1,7 @@
-# Dockerized React Application with Hot Reloading
+# Dockerized React Application with Hot Reloading and CI
 
-This project demonstrates how to set up a development environment using Docker that supports hot reloading. We leverage Docker's bind mounts to achieve this. 
+This project demonstrates setting up a development environment using Docker that supports hot reloading. We leverage Docker's bind mounts to achieve this.  
+We have different dockerfiles for development environment and prod.
 
 ## Project description
 
@@ -13,5 +14,5 @@ This means any changes made to the source code on the host machine are immediate
 
 - /app/node_modules line which creates a separate, Docker-managed volume for the node_modules directory inside the container.
 By specifying /app/node_modules as a Docker volume, we tell Docker to keep the node_modules directory inside the container separate from the bind mount.  
-This means when Docker is setting up the bind mount, it won't try to copy the host's node_modules into the container. Instead, the node_modules directory inside the container will remain as it was when the Docker image was built, with all packages installed correctly for the Docker environment.
+This means when Docker sets up the bind mount, it won't try to copy the host's node_modules into the container. Instead, the node_modules directory inside the container will remain as it was when the Docker image was built, with all packages installed correctly for the Docker environment.
 This is to ensure that the node_modules on the host doesn't overwrite the node_modules inside the Docker container, which may be structured differently depending on the operating system and architecture.
